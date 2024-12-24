@@ -2,7 +2,8 @@
 let infinityValue = Infinity;
 let minfinityValue = -Infinity;
 //나는 숫자가 아니야.
-let notANumber = NaN;
+let notANumber = NaN;   //숫자가 없다
+let name = "김" * "동진";   //NaN
 
 let nan = 1 + "10";     //묵시적 형변환 10을 문자열로 취급
 let nan2 = 2 * "10";    //묵시적 형변환 10을 숫자로 취급

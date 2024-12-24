@@ -10,6 +10,22 @@ function checkMood(mood) {
     }
 }
 
+function checkMood2(mood, type){
+    if(mood === "good"){
+        if(type === 1){
+            sing();
+        }else{
+            dance();
+        }
+    }else{
+        if(type === 1){
+            cry();
+        }else{
+            angry();
+        }
+    }
+}
+
 function sing(){
     console.log("ACTION :: sing")
 }
@@ -23,12 +39,36 @@ function dance(){
     console.log("ACTION :: ")
 }
 
+//콜백처리
+function checkMood3 (mood,goodCallback, badCallback){
+    if(mood === "good"){
+        goodCallback();
+    }else{
+        badCallback();
+    }
+};
+
+// checkMood("good",1);
+
+// checkmood3 ("bad",()=>{
+//     console.log("ACTION :: dance3");
+// }, () =>{
+//     console.log("ACTION :: angry3");
+// });
+
 //콜백처리2
-function repeat(){
-    for(let i = 1; i<10 ; i++){
+function repeat(idx, callback){
+    for(let i = 1; i<idx ; i++){
         callback(i);
-        console.log(i*2+" ")
+        //console.log(i**2+" ")
     }
 }
 
-repeat();
+repeat(5,(i) => {
+    console.log(i**7);
+});
+
+function calculate(i){
+    console.log(i**4);
+}
+

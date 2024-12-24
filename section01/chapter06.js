@@ -2,7 +2,7 @@
 let obj1 = new Object();
 let obj2 ={};
 
-//2. 객체 프로퍼티
+//2. 객체 프로퍼티(객체속성)
 let person = {
     name:"홍길동",
     age: 20,
@@ -17,7 +17,7 @@ let person = {
 //멤버변수 새로추가
 person.address = "강남구 352";
 //멤버변수 삭제
-//delete person.address;
+delete person.address;
 
 console.log(person["address"]);
 //멤버변수 유무
