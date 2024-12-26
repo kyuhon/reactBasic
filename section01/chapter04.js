@@ -5,6 +5,12 @@ let getArea = (width, height) =>{return width * height};
 let area1 = getArea(10,20);
 console.log(area1);
 
+getArea2(10,50);
+let area2 = getArea2(10,50);
+
+console.log(getArea2);
+console.log(area2);
+
 function getArea2(width , height){
     //중첩함수
     function anotherFunction(){
@@ -14,6 +20,10 @@ function getArea2(width , height){
     return width * height;
 };
 
-let area2 = getArea2(10,50);
-console.log(area2);
 
+let expression = function hoisting() {
+    console.log('Will this work?');
+};
+
+console.log(expression);
+expression();

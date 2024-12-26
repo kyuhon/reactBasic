@@ -22,6 +22,7 @@ function printName(person){
     const name = person && person.name;
     console.log(name || "person 값이 없음");
 }
+
 function printName2(person){
     if(typeof person === 'object'){
         console.log(person.name);
@@ -29,6 +30,9 @@ function printName2(person){
         console.log("person 값이 없음");
     }
 }
-console.log(typeof {});
-//printName();
+
 printName2({name:"kdj"});
+printName();
+
+
+console.log(typeof {});

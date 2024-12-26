@@ -4,7 +4,7 @@ let count = array1.push(5);
 console.log(array1);
 console.log(count);
 
-//2. pop 배열에서 가져온다.
+//2. pop() 메서드는 배열에서 마지막 원소를 제거한 후에, 제거된 원소를 결과로 반환
 let array2 = [1,2,3];
 let value = array2.pop();
 console.log(array2);

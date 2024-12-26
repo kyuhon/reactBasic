@@ -48,13 +48,15 @@ function checkMood3 (mood,goodCallback, badCallback){
     }
 };
 
-// checkMood("good",1);
 
-// checkmood3 ("bad",()=>{
-//     console.log("ACTION :: dance3");
-// }, () =>{
-//     console.log("ACTION :: angry3");
-// });
+checkMood2("good",1);
+
+checkMood3 ("bad",()=>{
+    console.log("ACTION :: dance3");
+}, () =>{
+     console.log("ACTION :: angry3");
+ });
+
 
 //콜백처리2
 function repeat(idx, callback){
@@ -65,10 +67,7 @@ function repeat(idx, callback){
 }
 
 repeat(5,(i) => {
-    console.log(i**7);
+    console.log(i**3);
 });
 
-function calculate(i){
-    console.log(i**4);
-}
 

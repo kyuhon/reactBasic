@@ -13,8 +13,9 @@ let arrayC = [
     {},
     [],
     ()=>{
-        console.log("나는 함수다.") // 리턴값이 없으므로 undifined 가 나옴
+        return console.log("나는 함수다.") // 리턴값이 없으므로 undifined 가 나옴
     }
 ];
 
-console.log(arrayC[0]);
+console.log(arrayC[1]);
+console.log(arrayC[8]());

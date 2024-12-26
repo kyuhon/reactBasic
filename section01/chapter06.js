@@ -17,9 +17,9 @@ let person = {
 //멤버변수 새로추가
 person.address = "강남구 352";
 //멤버변수 삭제
-delete person.address;
-
+//delete person.address;
 console.log(person["address"]);
+
 //멤버변수 유무
 let flag = "name" in person;
 console.log(`flag = ${flag}`);
