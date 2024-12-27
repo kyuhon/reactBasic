@@ -1,16 +1,21 @@
 import './App.css'
-import Header from "./components/Header"
-import Main from "./components/Main"
-import Footer from "./components/Footer"
+import { useState } from 'react'
+import Bulb from './components/Bulb'
+import Counter from './components/Counter';
+
+
 
 function App() {
+  console.log('App');
   return (
     <>
-     <Header/> 
-     <Main />
-     <Footer />
+      <div>
+        <Bulb />
+        <Counter/>
+      </div>
     </>
   )
 }
+
 
 export default App
