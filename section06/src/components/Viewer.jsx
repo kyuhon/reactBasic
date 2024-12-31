@@ -14,4 +14,4 @@ const Viewer2 = ({ inputValue, result }) => {
       </div>
     );
   };
-export default Viewer2;
+export default Viewer;

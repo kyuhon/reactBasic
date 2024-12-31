@@ -1,0 +1,30 @@
+.listItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 5px 20px 5px;
+    border-bottom: 1px solid rgb(145, 145, 145);
+}
+
+.listItem > input {
+    width: 25px;
+}
+
+.listItem > p.content {
+    flex: 1;
+}
+
+.listItem > p.date {
+    color: rgb(122, 122, 122);
+    font-size: 15px;
+}
+
+.listItem > Button {
+    background-color: red;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}

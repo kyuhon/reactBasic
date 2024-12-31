@@ -42,4 +42,4 @@ const Controller2 = ({ onNumberClick, onOperatorClick, onCalculate, onClear }) =
     );
   };
 
-export default Controller2;
+export default Controller;
