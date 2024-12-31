@@ -11,6 +11,7 @@ let area2 = getArea2(10,50);
 console.log(getArea2);
 console.log(area2);
 
+
 function getArea2(width , height){
     //중첩함수
     function anotherFunction(){
