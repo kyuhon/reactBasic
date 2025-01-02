@@ -3,7 +3,7 @@ import Header from './components/Header'
 import List from './components/List'
 import Editer from './components/Editer'
 import Exam from './components/exam'
-import { useState, useRef, useReducer, useCallback } from 'react'
+import { useState, useRef, useReducer, useCallback, createContext, useMemo } from 'react'
 
 //가상의 데이터(마운트 : 서버에서 데이터를 가져온다.(Ajax json))
 //목업(Mock-up): 아이디어나 제품의 초기 개념을 실물과 비슷하게 시제품으로 제작하는 작업과 결과물
@@ -49,6 +49,10 @@ function reducer(state, action){
     default: return state;
   }
 }
+
+//createContext() => Session session = request.getSession();
+export const TodoStateContext = createContext();
+export const TodoDispatchContext = createContext();
 
 function App() {
   //const [todos, setTodos] = useState(mockData);
@@ -117,12 +121,21 @@ function App() {
     });
   },[]);
 
+  //TodoDispatchContext.Provider 위한 useMemo() 만들어야된다
+  const memoizedDispatch = useMemo(()=>{
+    return {onInsert, onUpdate, onDelete};
+  },[]);
+
   return (
     <div className='app'>
-      <Exam/>
+     <Exam />
      <Header />
-     <Editer onInsert={onInsert}/>
-     <List todos={todos} onUpdate={onUpdate} onDelete={onDelete}/>
+     <TodoStateContext.Provider value={todos}> 
+      <TodoDispatchContext.Provider value={memoizedDispatch}>
+      <Editer />
+      <List />
+      </TodoDispatchContext.Provider>
+     </TodoStateContext.Provider>
     </div>
   )
 }
