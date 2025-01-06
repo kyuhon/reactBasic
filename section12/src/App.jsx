@@ -100,8 +100,18 @@ function App() {
   // };
   //const [useSearchParams, setSearchParams] = useSearchParams();
 
+  //쿼리스트링 이벤트 페이지요청
+  const nav = useNavigate();
+  const onClickButton = ()=>{
+    nav('/new?value=hello');
+  };
+
   return (
     <>
+    {/* 동적라우팅 (쿼리스트링) */}
+    <Link to="/new?value=hello"> New(Query) </Link>
+    <button onClick={onClickButton}>쿼리스트링으로 이벤트로 페이지요청하기</button>
+    <hr />
     {/* <Header title={'HEADER'} left={< Button text={'<'} type={'GREEN'} />}
      right={<Button text={'>'} type={'RED'}/>}/> */}
     
@@ -110,7 +120,7 @@ function App() {
   
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/new" element={<New />}/>
+        <Route path="/new/*" element={<New />}/>
         <Route path="/diary/:id" element={<Diary />}/>
         <Route path="/edit/:id" element={<Edit />}/>
         <Route path="*" element={<NotFound />}/>
