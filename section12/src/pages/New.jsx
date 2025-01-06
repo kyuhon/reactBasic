@@ -18,9 +18,9 @@ const New = () => {
 
     return ( 
       <div>
-        <h4>쿼리스트링으로 넘어오는 값{params.get('value')}</h4> 
         <Header  title={"새 일기 쓰기"} left={<Button onClick={()=>{nav(-1)}} text={"< 뒤로 가기"} />} /> 
         <Editor onSubmit={onSubmit}/>
+        <h4>쿼리스트링으로 넘어오는 값{params.get('value')}</h4> 
       </div> 
     ); 
   };
